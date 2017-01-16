@@ -13,7 +13,7 @@ IOS-Selector是一个仿苹果select的选择器控件。
 * default： 默认选中项（参数格式严格按照demo来，有几级就写几级）
 * callback： 确定选择的回调函数，传回三个参数，分别是被选中项的id的数组/文本的数组/完整key值得数组
 
-调用示例：
+###调用示例：
 
 ```javascript
     var mySelector = new IosSelector("#demo",{
