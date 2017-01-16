@@ -28,7 +28,7 @@ IOS-Selector是一个仿苹果select的选择器控件。
 ```
 
 ###示例图片
-![image](https://github.com/web677/IOS-Select/blob/master/img/ios-selector.png)
+![image](https://github.com/web677/IOS-Select/blob/master/img/ios-selector.jpg)
 
 ##注意：
 
