@@ -8,7 +8,7 @@ IOS-Selector是一个仿苹果select的选择器控件。
 ##参数
 
 * column： 选择框联动层级
-* data： 数据
+* data： 数据（数据格式严格参照给出的格式）
 * title： 选择控件title
 * default： 默认选中项（参数格式严格按照demo来，有几级就写几级）
 * callback： 确定选择的回调函数，传回三个参数，分别是被选中项的id的数组/文本的数组/完整key值得数组
@@ -17,7 +17,7 @@ IOS-Selector是一个仿苹果select的选择器控件。
 
 ```javascript
     var mySelector = new IosSelector("#demo",{
-            column: 2,
+            column: 3,
             data: address,
             title: "地址选择",
             default: ["23-河南省","992-平顶山市","1413-高新技术产业开发区-467000-0375"],
@@ -26,6 +26,9 @@ IOS-Selector是一个仿苹果select的选择器控件。
             }
     });
 ```
+
+###示例图片
+![image](https://github.com/web677/IOS-Select/blob/master/img/ios-selector.css)
 
 ##注意：
 
