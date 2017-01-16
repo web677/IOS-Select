@@ -13,6 +13,20 @@ IOS-Selector是一个仿苹果select的选择器控件。
 * default： 默认选中项（参数格式严格按照demo来，有几级就写几级）
 * callback： 确定选择的回调函数，传回三个参数，分别是被选中项的id的数组/文本的数组/完整key值得数组
 
+调用示例：
+
+```javascript
+    var mySelector = new IosSelector("#demo",{
+            column: 2,
+            data: address,
+            title: "地址选择",
+            default: ["23-河南省","992-平顶山市","1413-高新技术产业开发区-467000-0375"],
+            callback: function(id,text,key) {
+                console.log(id,text,key);
+            }
+    });
+```
+
 ##注意：
 
 * 引入的iscroll必须为probe版本的;
