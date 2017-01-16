@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size: 50px;">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/ios-selector.css">
+    <style type="text/css">
+        button{
+            display: block;
+            margin:1rem auto;
+            padding: 0.1rem 0.3rem;
+            -webkit-appearance: button;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="demo">选择地址</button>
+</body>
+<script type=""></script>
+<script type="text/javascript" src="address-data.js"></script>
+<script type="text/javascript" src="js/iscroll-probe.js"></script>
+<script type="text/javascript" src="js/ios-selector.js"></script>
+<script type="text/javascript">
+    var mySelector = new IosSelector("#demo",{
+            column: 2,
+            data: address,
+            title: "地址选择",
+            default: ["23-河南省","992-平顶山市","1413-高新技术产业开发区-467000-0375"],
+            callback: function(id,text,key) {
+                console.log(id,text,key);
+            }
+    });
+
+</script>
+</html>

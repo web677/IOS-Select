@@ -1,0 +1,17 @@
+/*初始化样式*/
+::-webkit-scrollbar {width:0px;border:solid 0px rgba(0,0,0,0);}
+::-webkit-input-placeholder { color: #465d75;}
+* {-webkit-tap-highlight-color:rgba(255,255,255,0);outline:0;}
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td{
+    margin:0;
+    padding:0;  
+    border: 0 none;
+    -webkit-appearance: none;
+    -webkit-user-select:none;
+    -webkit-touch-callout: none;
+}
+img {border: 0 none;}
+ul,li {list-style-type:none;}
+a:link,a:hover,a:active,a:visited {text-decoration: none;color:#333;}
+.disabled,[disabled] {opacity:1;}
+input:not([type="button"]),textarea {-webkit-user-select:auto;}
