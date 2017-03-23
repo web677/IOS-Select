@@ -282,6 +282,10 @@
                 _this.panelWrap.style.display = "none";
                 _this.mask.style.display = "none";
                 _this.mainWrap.innerHTML = "";
+                
+                _this.item.splice(0, _this.item.length);
+                _this.myScroll.splice(0, _this.myScroll.length);
+                _this.itemHeight = 35;
             },300)
         }
     }
