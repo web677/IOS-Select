@@ -19,18 +19,68 @@
 </head>
 
 <body>
-    <button id="demo">选择地址</button>
+    <button id="J_select_address">选择地址</button>
+    <button id="J_select_date">选择日期</button>
+    <button id="J_select_gender">选择性别</button>
 </body>
 <script type=""></script>
 <script type="text/javascript" src="address-data.js"></script>
 <script type="text/javascript" src="js/iscroll-probe.js"></script>
 <script type="text/javascript" src="js/ios-selector.js"></script>
 <script type="text/javascript">
-    var mySelector = new IosSelector("#demo",{
+    var mySelector = new IosSelector("#J_select_address",{
             column: 3,
             data: address,
             title: "地址选择",
             default: ["23-河南省","992-平顶山市","1413-高新技术产业开发区-467000-0375"],
+            callback: function(id,text,key) {
+                console.log(id,text,key);
+            }
+    });
+    
+/*选择日期*/
+/* 生成日期数据 */
+/* year为向上取 整10年 */
+    var year = Math.floor(new Date().getFullYear() % 100 / 10 + 1) * 10 + Math.floor(new Date().getFullYear() / 100) * 100;
+
+    var time = {};
+    for (var i = 1900; i <= year; i++){
+        time[i + "年"] = {};
+        for(var j = 1; j <= 12; j++){
+            time[i + "年"][j + "月"] = [];
+            for(var k =1; k <= 28; k++){
+                time[i + "年"][j + "月"].push(k + "日");
+            }
+            if(j === 2){
+                if((i % 4 === 0 && i % 100 !== 0) || i % 400){
+                    time[i + "年"][j + "月"].push("29日");
+                }
+            }else if([4,6,9,11].indexOf(j) > -1){
+                time[i + "年"][j + "月"].push("29日","30日");
+            }else{
+                time[i + "年"][j + "月"].push("29日","30日","31日");
+            }
+        }
+    }
+
+    var mySelector = new IosSelector("#J_select_date",{
+            column: 3,
+            data: time,
+            title: "日期选择",
+            default: ["1990年","1月","1日"],
+            callback: function(id,text,key) {
+                console.log(id,text,key);
+            }
+    });
+    
+/*选择性别*/
+    var gender = ["男", "女", "其他"];
+     
+    var mySelector = new IosSelector("#J_select_gender",{
+            column: 1,
+            data: gender,
+            title: "性别选择",
+            default: ["男"],
             callback: function(id,text,key) {
                 console.log(id,text,key);
             }
