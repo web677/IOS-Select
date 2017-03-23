@@ -6,17 +6,18 @@ body {
     background: #fff;
     font-family: Arial, "黑体", "宋体";
 }
-.ios-select-mask{
+.ios-select-mask {
     display: block;
     position: fixed;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-    background: rgba(0,0,0,0.7);
+    background: rgba(0, 0, 0, 0.7);
     opacity: 1;
     z-index: 9997;
 }
+
 .ios-select-box {
     position: fixed;
     width: 100%;
@@ -60,7 +61,7 @@ body {
     display: -webkit-flex;
     display: -webkit-box;
     position: relative;
-    height: 4.9rem;
+    height: 245px;
     overflow: hidden;
 }
 
@@ -76,8 +77,8 @@ body {
 
 .iso-select-databox li {
     font-size: 0.26rem;
-    height: 0.7rem;
-    line-height: 0.7rem;
+    height: 35px;
+    line-height: 35px;
     background-color: #fff;
     color: #111;
     opacity: 0.3;
@@ -113,9 +114,9 @@ body {
 }
 
 .cover-area1 {
-    top: 3rem;
+    bottom: 105px;
 }
 
 .cover-area2 {
-    top: 3.7rem;
+    bottom: 140px;
 }
