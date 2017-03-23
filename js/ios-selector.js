@@ -198,7 +198,8 @@
             var _item = "<li></li><li></li><li></li>";
             var d = this.formatData(data);
             d.forEach(function(v,i,a){
-                var vs = v.split("-");
+                var vs = v.toString().split("-");
+                !vs[1] && vs.push(vs[0]);
                 _item += '<li data-id="' + vs[0] + '" data-key="' + v + '" data-text="' + vs[1] + '">' + vs[1] + '</li>';
             })
             _item += '<li></li><li></li><li></li>';
