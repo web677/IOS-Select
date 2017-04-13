@@ -263,11 +263,11 @@
             [].forEach.call(obj.querySelectorAll("li"),function(v,i,a){
                 v.className = "";
             });
-            obj.querySelector("li:nth-child(" + (current + 4) + ")").className = "selected";
-            obj.querySelector("li:nth-child(" + (current + 5) + ")").className = "team1";
-            obj.querySelector("li:nth-child(" + (current + 3) + ")").className = "team1";
-            obj.querySelector("li:nth-child(" + (current + 6) + ")").className = "team2";
-            obj.querySelector("li:nth-child(" + (current + 2) + ")").className = "team2";
+            if(obj.querySelector("li:nth-child(" + (current + 4) + ")")) {obj.querySelector("li:nth-child(" + (current + 4) + ")").className = "selected";}
+            if(obj.querySelector("li:nth-child(" + (current + 5) + ")")) {obj.querySelector("li:nth-child(" + (current + 5) + ")").className = "team1";}
+            if(obj.querySelector("li:nth-child(" + (current + 3) + ")")) {obj.querySelector("li:nth-child(" + (current + 3) + ")").className = "team1";}
+            if(obj.querySelector("li:nth-child(" + (current + 6) + ")")) {obj.querySelector("li:nth-child(" + (current + 6) + ")").className = "team2";}
+            if(obj.querySelector("li:nth-child(" + (current + 2) + ")")) {obj.querySelector("li:nth-child(" + (current + 2) + ")").className = "team2";}
         },
 
         destroy: function(){
